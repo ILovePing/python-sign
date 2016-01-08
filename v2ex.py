@@ -1,11 +1,13 @@
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
 import requests
 import re
 
 class v2ex():
-    def __init__(self):
+    def __init__(self, username, password):
         self.s = requests.Session()
+        self.username = username
+        self.password = password
         self.headers = {
             'Host':'www.v2ex.com',
             'Origin':'http://www.v2ex.com',
@@ -14,14 +16,15 @@ class v2ex():
         }
 
     def get_once(self):
-        html = self.s.get('http://www.v2ex.com/signin', headers=self.headers).content
+        html = self.s.get('http://www.v2ex.com/signin', headers=self.headers).text
         once = re.search(r'value="(\d{5})"', html).group(1)
         return once
 
-    def login(self, username, password, once):
+    def login(self):
+        once = self.get_once()
         form_data = {
-            'u': username,
-            'p': password,
+            'u': self.username,
+            'p': self.password,
             'once': once,
             'next': '/'
         }
@@ -29,13 +32,12 @@ class v2ex():
         return res
 
     def sign(self):
-        html = self.s.get('http://www.v2ex.com/mission/daily', headers=self.headers).content
+        html = self.s.get('http://www.v2ex.com/mission/daily', headers=self.headers).text
         once_code = re.search(r'signout\?once=(\d{5})', html).group(1)
         url = 'http://www.v2ex.com/mission/daily/redeem?once=' + once_code
         return self.s.get(url, headers=self.headers)
 
 if __name__ == '__main__':
-    v2ex = v2ex()
-    once = v2ex.get_once()
-    v2ex.login('用户名', '密码', once)
+    v2ex = v2ex('', '')
+    v2ex.login()
     v2ex.sign()

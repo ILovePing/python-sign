@@ -3,10 +3,9 @@
 ### Usage
 . V2EX
 ```python
-  v2ex = v2ex()
-  once = v2ex.get_once()
-  v2ex.login('your username', 'your password', once)
-  v2ex.sign()
+v2ex = v2ex('your username', 'your password')
+v2ex.login()
+v2ex.sign()
 ```
 . 待添加...
 
