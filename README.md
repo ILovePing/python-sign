@@ -12,6 +12,9 @@
 
 ### about author
 [weibo](http://weibo.com/234224964)
+
 [facebook](http://facebook.com/FaithCSGO)
+
 [twitter](http://twitter.com/FaithCSGO)
+
 [instagram](http://instagram.com/faith0725)
