@@ -1,4 +1,4 @@
-## auto sign with Python
+## 简单的社交网站签到脚本
 
 ### Usage
 . V2EX
@@ -8,9 +8,9 @@
   v2ex.login('your username', 'your password', once)
   v2ex.sign()
 ```
-. another adding...
+. 待添加...
 
-### about author
+### 关于作者
 [weibo](http://weibo.com/234224964)
 
 [facebook](http://facebook.com/FaithCSGO)
