@@ -36,8 +36,3 @@ class v2ex():
         once_code = re.search(r'signout\?once=(\d{5})', html).group(1)
         url = 'http://www.v2ex.com/mission/daily/redeem?once=' + once_code
         return self.s.get(url, headers=self.headers)
-
-if __name__ == '__main__':
-    v2ex = v2ex('', '')
-    v2ex.login()
-    v2ex.sign()
