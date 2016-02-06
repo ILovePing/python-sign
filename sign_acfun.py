@@ -3,12 +3,12 @@
 import requests
 
 class acfun():
-    def __init__(self, username, passwod):
+    def __init__(self, username, password):
         self.s = requests.Session()
         self.login_url = 'http://www.acfun.tv/login.aspx'
         self.sign_url = 'http://www.acfun.tv/member/checkin.aspx'
         self.username = username
-        self.password = passwod
+        self.password = password
 
     def login(self):
         pload = {
