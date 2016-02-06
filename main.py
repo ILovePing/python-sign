@@ -10,13 +10,13 @@ if __name__ == '__main__':
     v2ex = v2ex('', '')
     v2ex.login()
     v2ex.sign()
-    # 优酷
+    # YouKu
     youku = youku('')
     youku.sign()
-    # 网易云音乐
+    # NetEaseMusic
     neteasemusic = neteasemusic('')
     neteasemusic.sign()
-    # actun
+    # AcFun
     acfun = acfun('', '')
     acfun.login()
     acfun.sign()
