@@ -26,6 +26,14 @@ acfun.login()
 acfun.sign()
 ```
 
+* TODO
+- [x]V2EX
+- [x]优酷
+- [x]网易云音乐
+- [x]AcFun
+- []百度贴吧
+- []各签到的成功或失败判断
+
 ### 关于作者
 [weibo](http://weibo.com/234224964)
 
